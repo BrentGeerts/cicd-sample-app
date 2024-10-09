@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+docker rm -f samplerunning || true
+
 # Controleer of tempdir bestaat, zo ja, verwijder het
 if [ -d "tempdir" ]; then
   echo "tempdir bestaat, verwijder het..."
